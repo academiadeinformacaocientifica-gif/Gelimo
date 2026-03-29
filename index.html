@@ -13,15 +13,15 @@
 
 <!-- NAV -->
 <nav>
-  <a href="index.html" class="nav-logo">Geli<span>mo</span></a>
+  <a href="#hero" class="nav-logo">Geli<span>mo</span></a>
   <ul class="nav-links">
-    <li><a href="menu.html">Menu</a></li>
-    <li><a href="sobre.html">Sobre</a></li>
-    <li><a href="galeria.html">Galeria</a></li>
-    <li><a href="depoimentos.html">Opiniões</a></li>
-    <li><a href="encomendas.html">Contacto</a></li>
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#galeria">Galeria</a></li>
+    <li><a href="#depoimentos">Opiniões</a></li>
+    <li><a href="#encomendas">Contacto</a></li>
   </ul>
-  <a href="encomendas.html" class="nav-cta">Encomendar 🍦</a>
+  <a href="#encomendas" class="nav-cta">Encomendar 🍦</a>
 </nav>
 
 <!-- HERO -->
@@ -37,8 +37,8 @@
       Gelados artesanais, waffles, crepes, brownies e muito mais — feitos com paixão, servidos com alegria no coração de Luanda.
     </p>
     <div class="hero-actions">
-      <a href="menu.html" class="btn-primary">Ver o Menu 🍨</a>
-      <a href="encomendas.html" class="btn-secondary">Fazer Encomenda</a>
+      <a href="#menu" class="btn-primary">Ver o Menu 🍨</a>
+      <a href="#encomendas" class="btn-secondary">Fazer Encomenda</a>
     </div>
     <div class="hero-stats">
       <div>
@@ -80,7 +80,6 @@
       <li>Encomendas para eventos, festas e celebrações</li>
       <li>Atendimento personalizado e apaixonado</li>
     </ul>
-    <a href="sobre.html" class="btn-primary" style="margin-top: 2rem;">Saiba Mais</a>
   </div>
   <div class="sobre-visual">
     <div class="sobre-card">
@@ -102,8 +101,123 @@
   </div>
 </section>
 
+<!-- MENU -->
+<section id="menu">
+  <span class="section-label">O nosso menu</span>
+  <h2 class="section-title">Escolha o seu<br/>momento favorito</h2>
+  <div class="menu-tabs">
+    <button class="tab-btn active" onclick="filterMenu('all',this)">Tudo</button>
+    <button class="tab-btn" onclick="filterMenu('gelados',this)">🍨 Gelados</button>
+    <button class="tab-btn" onclick="filterMenu('pastelaria',this)">🧇 Pastelaria</button>
+    <button class="tab-btn" onclick="filterMenu('bebidas',this)">🥤 Bebidas</button>
+  </div>
+  <div class="menu-grid" id="menuGrid"></div>
+</section>
+
+<!-- GALERIA -->
+<section id="galeria">
+  <span class="section-label">Galeria</span>
+  <h2 class="section-title">Ver para crer</h2>
+  <p class="section-sub">Cada prato é uma obra de arte. Cada visita, uma memória.</p>
+  <div class="galeria-grid">
+    <div class="galeria-item">
+      <img src="img/gelados-artesanais.jpg" alt="Gelados Artesanais">
+      <div class="galeria-overlay"><span>Gelados Artesanais</span></div>
+    </div>
+    <div class="galeria-item">
+      <img src="img/waffles-belgas.jpg" alt="Waffles Belgas">
+      <div class="galeria-overlay"><span>Waffles Belgas</span></div>
+    </div>
+    <div class="galeria-item">
+      <img src="img/bolos-sobremesas.jpg" alt="Bolos e Sobremesas">
+      <div class="galeria-overlay"><span>Bolos & Sobremesas</span></div>
+    </div>
+    <div class="galeria-item">
+      <img src="img/cafes-bebidas.jpg" alt="Cafés e Bebidas">
+      <div class="galeria-overlay"><span>Cafés & Bebidas</span></div>
+    </div>
+    <div class="galeria-item">
+      <img src="img/brownies-crepes.jpg" alt="Brownies e Crepes">
+      <div class="galeria-overlay"><span>Brownies & Crepes</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section id="depoimentos">
+  <span class="section-label">O que dizem de nós</span>
+  <h2 class="section-title">Clientes felizes,<br/>sabores inesquecíveis</h2>
+  <div class="dep-grid">
+    <div class="dep-card">
+      <div class="dep-stars">★★★★★</div>
+      <p class="dep-text">"Os melhores gelados de Luanda, sem dúvida. Estive a viver no estrangeiro e foi o lugar que mais me fez sentir em casa. Impecável!"</p>
+      <div class="dep-author">Maria C.</div>
+      <div class="dep-date">Cliente Google</div>
+    </div>
+    <div class="dep-card">
+      <div class="dep-stars">★★★★★</div>
+      <p class="dep-text">"Fiz uma encomenda para o aniversário da minha filha e superou todas as expectativas. Atendimento excelente e sabores deliciosos."</p>
+      <div class="dep-author">João M.</div>
+      <div class="dep-date">Cliente Google</div>
+    </div>
+    <div class="dep-card">
+      <div class="dep-stars">★★★★★</div>
+      <p class="dep-text">"Lugar incrível! O espaço é lindo, o pessoal é muito simpático e os gelados são autênticos. Já voltei várias vezes e não me cansarei!"</p>
+      <div class="dep-author">Ana P.</div>
+      <div class="dep-date">Cliente Google</div>
+    </div>
+  </div>
+</section>
+
+<!-- ENCOMENDAS -->
+<section id="encomendas">
+  <span class="section-label">Encomendas & Contacto</span>
+  <h2 class="section-title">Leve a Gelimo<br/>para o seu evento</h2>
+  <div class="enc-grid">
+    <form class="enc-form" onsubmit="submitForm(event)">
+      <input type="text" placeholder="O seu nome *" required/>
+      <input type="tel" placeholder="Telefone / WhatsApp *" required/>
+      <input type="email" placeholder="E-mail (opcional)"/>
+      <select>
+        <option value="" disabled selected>Tipo de encomenda</option>
+        <option>Gelados & Pastelaria (levantar na loja)</option>
+        <option>Encomenda para Evento</option>
+        <option>Entrega ao domicílio</option>
+        <option>Outra</option>
+      </select>
+      <textarea placeholder="Descreva a sua encomenda ou deixe a sua mensagem..."></textarea>
+      <button type="submit" class="btn-primary">Enviar Pedido 🍦</button>
+    </form>
+    <div class="enc-info">
+      <div class="enc-info-item">
+        <div class="enc-icon">📍</div>
+        <div>
+          <h4>Localização</h4>
+          <p>Edifício Maianga, Largo da Maianga<br/>Luanda, Angola</p>
+        </div>
+      </div>
+      <div class="enc-info-item">
+        <div class="enc-icon">🕐</div>
+        <div>
+          <h4>Horário</h4>
+          <p>Segunda a Sábado: 09h00 – 21h00<br/>Domingo: 10h00 – 20h00</p>
+        </div>
+      </div>
+      <div class="enc-info-item">
+        <div class="enc-icon">📞</div>
+        <div>
+          <h4>Contacto Directo</h4>
+          <p>Fale connosco pelo WhatsApp para encomendas rápidas e eventos especiais.</p>
+          <a href="https://wa.me/244900000000" class="whatsapp-btn" target="_blank">
+            💬 WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- FOOTER -->
-<footer>
   <div class="footer-grid">
     <div>
       <div class="footer-logo">Gelimo</div>
@@ -112,19 +226,19 @@
     <div class="footer-col">
       <h4>Menu</h4>
       <ul>
-        <li><a href="menu.html">Gelados</a></li>
-        <li><a href="menu.html">Pastelaria</a></li>
-        <li><a href="menu.html">Bebidas</a></li>
-        <li><a href="encomendas.html">Encomendas</a></li>
+        <li><a href="#menu">Gelados</a></li>
+        <li><a href="#menu">Pastelaria</a></li>
+        <li><a href="#menu">Bebidas</a></li>
+        <li><a href="#encomendas">Encomendas</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h4>Empresa</h4>
       <ul>
-        <li><a href="sobre.html">Sobre Nós</a></li>
-        <li><a href="galeria.html">Galeria</a></li>
-        <li><a href="depoimentos.html">Opiniões</a></li>
-        <li><a href="encomendas.html">Contacto</a></li>
+        <li><a href="#sobre">Sobre Nós</a></li>
+        <li><a href="#galeria">Galeria</a></li>
+        <li><a href="#depoimentos">Opiniões</a></li>
+        <li><a href="#encomendas">Contacto</a></li>
       </ul>
     </div>
   </div>
