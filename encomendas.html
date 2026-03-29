@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Encomendas e contacto da Gelimo. Faça pedidos para eventos em Luanda. Gelados e pastelaria personalizados."/>
+<meta name="keywords" content="encomendas geladaria Luanda, contacto Gelimo, pedidos eventos Angola"/>
+<title>Encomendas & Contacto - Gelimo</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=Caveat:wght@700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">Geli<span>mo</span></a>
+  <ul class="nav-links">
+    <li><a href="menu.html">Menu</a></li>
+    <li><a href="sobre.html">Sobre</a></li>
+    <li><a href="galeria.html">Galeria</a></li>
+    <li><a href="depoimentos.html">Opiniões</a></li>
+    <li><a href="encomendas.html">Contacto</a></li>
+  </ul>
+  <a href="encomendas.html" class="nav-cta">Encomendar 🍦</a>
+</nav>
+
+<!-- ENCOMENDAS -->
+<section id="encomendas">
+  <span class="section-label">Encomendas & Contacto</span>
+  <h2 class="section-title">Leve a Gelimo<br/>para o seu evento</h2>
+  <div class="enc-grid">
+    <form class="enc-form" onsubmit="submitForm(event)">
+      <input type="text" placeholder="O seu nome *" required/>
+      <input type="tel" placeholder="Telefone / WhatsApp *" required/>
+      <input type="email" placeholder="E-mail (opcional)"/>
+      <select>
+        <option value="" disabled selected>Tipo de encomenda</option>
+        <option>Gelados & Pastelaria (levantar na loja)</option>
+        <option>Encomenda para Evento</option>
+        <option>Entrega ao domicílio</option>
+        <option>Outra</option>
+      </select>
+      <textarea placeholder="Descreva a sua encomenda ou deixe a sua mensagem..."></textarea>
+      <button type="submit" class="btn-primary">Enviar Pedido 🍦</button>
+    </form>
+    <div class="enc-info">
+      <div class="enc-info-item">
+        <div class="enc-icon">📍</div>
+        <div>
+          <h4>Localização</h4>
+          <p>Edifício Maianga, Largo da Maianga<br/>Luanda, Angola</p>
+        </div>
+      </div>
+      <div class="enc-info-item">
+        <div class="enc-icon">🕐</div>
+        <div>
+          <h4>Horário</h4>
+          <p>Segunda a Sábado: 09h00 – 21h00<br/>Domingo: 10h00 – 20h00</p>
+        </div>
+      </div>
+      <div class="enc-info-item">
+        <div class="enc-icon">📞</div>
+        <div>
+          <h4>Contacto Directo</h4>
+          <p>Fale connosco pelo WhatsApp para encomendas rápidas e eventos especiais.</p>
+          <a href="https://wa.me/244900000000" class="whatsapp-btn" target="_blank">
+            💬 WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-logo">Gelimo</div>
+      <p class="footer-desc">Gelataria & Pasticceria em Luanda. Happiness has many flavours — e nós temos todos.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Menu</h4>
+      <ul>
+        <li><a href="menu.html">Gelados</a></li>
+        <li><a href="menu.html">Pastelaria</a></li>
+        <li><a href="menu.html">Bebidas</a></li>
+        <li><a href="encomendas.html">Encomendas</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Empresa</h4>
+      <ul>
+        <li><a href="sobre.html">Sobre Nós</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
+        <li><a href="depoimentos.html">Opiniões</a></li>
+        <li><a href="encomendas.html">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2024 Gelimo – Gelataria & Pasticceria. Todos os direitos reservados.</span>
+    <div class="footer-social">
+      <a href="#" class="social-dot">📷</a>
+      <a href="#" class="social-dot">👍</a>
+      <a href="#" class="social-dot">💬</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/244900000000" class="float-wa" target="_blank" title="Fale connosco no WhatsApp">💬</a>
+
+<script src="script.js"></script>
+</body>
+</html>
